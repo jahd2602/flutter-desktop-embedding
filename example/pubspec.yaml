@@ -37,3 +37,6 @@ flutter:
           weight: 700
         - asset: fonts/Roboto/Roboto-Black.ttf
           weight: 900
+
+  assets:
+    - assets/berlin1.jpg
