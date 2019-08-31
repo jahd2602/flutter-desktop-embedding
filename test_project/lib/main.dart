@@ -1,9 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:test_project/question.dart';
 
-import 'Answer.dart';
+import 'Quiz.dart';
 
-void main() => runApp(MyApp());
+Future main() async {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -75,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _answerQuestion() {
     print("Answer question!");
     setState(() {
-      _question_index = (_question_index + 1) % questions.length;
+      _question_index++;
     });
   }
 
@@ -95,31 +98,14 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        children: <Widget>[
-          Question(questions[_question_index]["question"]),
-          ...(questions[_question_index]["answers"] as List<String>)
-              .map((answer) => new Answer(
-                    pressHandler: _answerQuestion, text: answer,
-                  ))
-              .toList(),
+        children: [
+          _question_index < questions.length
+              ? Quiz(_answerQuestion, questions, _question_index)
+              : Center(
+                  child: Text("Good"),
+                ),
           Center(
-            // Center is a layout widget. It takes a single child and positions it
-            // in the middle of the parent.
             child: Column(
-              // Column is also layout widget. It takes a list of children and
-              // arranges them vertically. By default, it sizes itself to fit its
-              // children horizontally, and tries to be as tall as its parent.
-              //
-              // Invoke "debug painting" (press "p" in the console, czhoose the
-              // "Toggle Debug Paint" action from the Flutter Inspector in Android
-              // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-              // to see the wireframe for each widget.
-              //
-              // Column has various properties to control how it sizes itself and
-              // how it positions its children. Here we use mainAxisAlignment to
-              // center the children vertically; the main axis here is the vertical
-              // axis because Columns are vertical (the cross axis would be
-              // horizontal).
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
@@ -131,9 +117,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -142,3 +129,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
