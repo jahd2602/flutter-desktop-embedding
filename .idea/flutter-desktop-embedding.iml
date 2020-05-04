@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/color_panel/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/color_panel/build" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/example_plugin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/example_plugin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/file_chooser/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/file_chooser/build" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/menubar/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/menubar/build" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/window_size/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/window_size/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/testbed/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/testbed/build" />
+      <excludeFolder url="file://$MODULE_DIR$/webenabledapp/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/webenabledapp/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
